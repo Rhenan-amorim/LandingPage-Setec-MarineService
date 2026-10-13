@@ -186,7 +186,17 @@
             animation: waveBounce 2.5s ease-in-out infinite;
         }
         
-    </style>
+            /* Partner logos keep their intrinsic proportions inside consistent bounds. */
+        @keyframes partnerMarquee { from { transform: translateX(0); } to { transform: translateX(calc(-50% - 2.5rem)); } }
+        .partner-track { animation-name: partnerMarquee; animation-duration: 45s; }
+        .partner-track img { flex: none; width: auto; height: 48px; max-width: 190px; object-fit: contain; }
+        .partner-track img.partner-logo-cbo { height: 56px; }
+
+        @media (max-width: 767px) {
+            .partner-track img { height: 40px; max-width: 160px; }
+            .partner-track img.partner-logo-cbo { height: 48px; }
+        }
+</style>
 </head>
 <body class="bg-background text-on-background font-body-md">
 <!-- Header -->
@@ -310,18 +320,22 @@
 </div>
 <!-- Marquee -->
 <div class="relative z-10 w-full bg-cream-bg py-8 overflow-hidden border-t border-b border-primary-container/10">
-<div class="flex w-max gap-20 items-center animate-marquee flex-nowrap">
+<div class="flex w-max gap-20 items-center animate-marquee partner-track flex-nowrap">
 <!-- First set of logos -->
 <div class="flex gap-20 items-center shrink-0">
 <img alt="Aegir" crossorigin="anonymous" class="h-12 w-auto object-contain hover:scale-110 transition-transform" src="logos/aegir.png">
 <img alt="PRIO" crossorigin="anonymous" class="h-12 w-auto object-contain hover:scale-110 transition-transform" src="logos/prio.png">
 <img alt="WCM" crossorigin="anonymous" class="h-12 w-auto object-contain hover:scale-110 transition-transform" src="logos/wcm.png">
 <img alt="DOF" crossorigin="anonymous" class="h-12 w-auto object-contain hover:scale-110 transition-transform" src="logos/dof.png">
-<img alt="CBO" crossorigin="anonymous" class="h-12 w-auto object-contain hover:scale-110 transition-transform" src="logos/cbo.png">
+<img alt="CBO" crossorigin="anonymous" class="partner-logo-cbo h-12 w-auto object-contain hover:scale-110 transition-transform" src="logos/grupo-cbo-transparent.png">
 <img alt="Accelleron" crossorigin="anonymous" class="h-12 w-auto object-contain hover:scale-110 transition-transform" src="logos/accelleron.png">
 <img alt="Baru Offshore" crossorigin="anonymous" class="h-12 w-auto object-contain hover:scale-110 transition-transform" src="logos/baru.png">
 <img alt="VMS Group" crossorigin="anonymous" class="h-12 w-auto object-contain hover:scale-110 transition-transform" src="logos/vms.png">
 <img alt="Petrobras" crossorigin="anonymous" class="h-12 w-auto object-contain hover:scale-110 transition-transform" src="logos/petrobras.png">
+<img alt="OceanPact" crossorigin="anonymous" class="h-12 w-auto object-contain hover:scale-110 transition-transform" src="logos/oceanpact-transparent.png">
+<img alt="Camorim" crossorigin="anonymous" class="h-12 w-auto object-contain hover:scale-110 transition-transform" src="logos/camorim-transparent.png">
+<img alt="Solstad Offshore" crossorigin="anonymous" class="h-12 w-auto object-contain hover:scale-110 transition-transform" src="logos/solstad-offshore-transparent.png">
+<img alt="Mac Laren" crossorigin="anonymous" class="partner-logo-mac h-12 w-auto object-contain hover:scale-110 transition-transform" src="logos/mac-laren-transparent.png">
 </div>
 <!-- Duplicate set of logos for seamless loop -->
 <div class="flex gap-20 items-center shrink-0" aria-hidden="true">
@@ -329,11 +343,15 @@
 <img alt="PRIO" crossorigin="anonymous" class="h-12 w-auto object-contain hover:scale-110 transition-transform" src="logos/prio.png">
 <img alt="WCM" crossorigin="anonymous" class="h-12 w-auto object-contain hover:scale-110 transition-transform" src="logos/wcm.png">
 <img alt="DOF" crossorigin="anonymous" class="h-12 w-auto object-contain hover:scale-110 transition-transform" src="logos/dof.png">
-<img alt="CBO" crossorigin="anonymous" class="h-12 w-auto object-contain hover:scale-110 transition-transform" src="logos/cbo.png">
+<img alt="CBO" crossorigin="anonymous" class="partner-logo-cbo h-12 w-auto object-contain hover:scale-110 transition-transform" src="logos/grupo-cbo-transparent.png">
 <img alt="Accelleron" crossorigin="anonymous" class="h-12 w-auto object-contain hover:scale-110 transition-transform" src="logos/accelleron.png">
 <img alt="Baru Offshore" crossorigin="anonymous" class="h-12 w-auto object-contain hover:scale-110 transition-transform" src="logos/baru.png">
 <img alt="VMS Group" crossorigin="anonymous" class="h-12 w-auto object-contain hover:scale-110 transition-transform" src="logos/vms.png">
 <img alt="Petrobras" crossorigin="anonymous" class="h-12 w-auto object-contain hover:scale-110 transition-transform" src="logos/petrobras.png">
+<img alt="OceanPact" crossorigin="anonymous" class="h-12 w-auto object-contain hover:scale-110 transition-transform" src="logos/oceanpact-transparent.png">
+<img alt="Camorim" crossorigin="anonymous" class="h-12 w-auto object-contain hover:scale-110 transition-transform" src="logos/camorim-transparent.png">
+<img alt="Solstad Offshore" crossorigin="anonymous" class="h-12 w-auto object-contain hover:scale-110 transition-transform" src="logos/solstad-offshore-transparent.png">
+<img alt="Mac Laren" crossorigin="anonymous" class="partner-logo-mac h-12 w-auto object-contain hover:scale-110 transition-transform" src="logos/mac-laren-transparent.png">
 </div>
 </div>
 </div>
